@@ -1,51 +1,33 @@
 # My Market 🛒
 
-## 🌟 Introducción
-**My Market** es un moderno marketplace desarrollado con **HTML5** y **CSS3**, diseñado para ofrecer una experiencia de compra intuitiva y completamente responsive. Este proyecto implementa las mejores prácticas de diseño web para crear una interfaz atractiva y funcional.
+## Funcionalidad del Carrito de Compras
 
----
+Se ha añadido la funcionalidad al carrito de compras, que incluye:
 
-## 🎯 Características Principales
+- **Agregar productos**: Los usuarios pueden agregar productos al carrito.
+- **Actualizar cantidades**: Se actualiza la cantidad de productos en el carrito. 
+- **Eliminar productos**: Los usuarios pueden eliminar productos del carrito.
 
-### 📐 Layout y Estructura
-- **Grid Layout**: Se ha implementado una estructura principal utilizando **CSS Grid Layout**, lo que permite una distribución eficiente del contenido:
-  - **Header**: Encabezado de la aplicación con el logo
-  - **Sidebar**: Espacio para las diferentes categorías.
-  - **Main de productos**: Muestra múltiples cards de productos.
-  - **Footer**: Contiene información adicional y enlaces a redes sociales.
+## Arquitectura 
 
----
+Este proyecto está diseñado con una **arquitectura modular**, utilizando **JavaScript Vanilla** para asegurar un código limpio, ligero y fácil de mantener. El enfoque modular divide la aplicación en partes independientes que se encargan de tareas específicas.Sigue el principio de **separación de preocupaciones**, dividiendo la funcionalidad en diferentes módulos y carpetas según su propósito.
+- **`components/`**: Contiene los componentes reutilizables de la interfaz de usuario, como el modal del carrito y los elementos individuales de productos.
+- **`mappers/`**: Incluye las funciones que transforman los datos de la API en un formato adecuado para la vista de la aplicación.
+- **`services/`**: Encargado de las interacciones con la API, manteniendo la lógica de negocio separada de las llamadas a la red.
 
-### 💫 Diseño Responsive
-- **Adaptación fluida**: Se ha utilizado **Media Queries** para asegurar que el diseño se ajuste a:
-  - **Dispositivos móviles**: Tamaños pequeños con layout compacto.
-  - **Tablets**: Tamaños medianos con un diseño optimizado.
-  - **Escritorio**: Layout amplio con distribución horizontal.
-- Los elementos y el contenido se reorganizan dinámicamente según el tamaño de pantalla.
+  
+## Tecnologías Utilizadas
 
----
+- **JavaScript Vanilla**: No se han utilizado frameworks o librerías adicionales.
+  
+## Configuraciones del proyecto
 
-### 🎴 Sistema de Cards
-- **Cards de producto**: Diseño moderno que incluye:
-  - Imagen del producto
-  - Nombre 
-  - Precio
-  - Categoría
-  - Botón
-- Las cards se organizan automáticamente en un layout responsive basado en **CSS Grid**.
+Para probarlo localmente una vez descargado el código se deberá seguir los siguientes pasos: 
+- **npm i**: Instalación de node modules.
+- **npm run dev**: Para compilar el proyecto.
+  
 
----
 
-### 🏷️ Sistema de Badges
-- **Badges distintivos** para resaltar:
-  - Categorías de productos (e.g., Vegetales, Lácteos, etc.)
-  - Descuentos y ofertas especiales
----
 
-## 🛠️ Tecnologías Utilizadas
-- **HTML5**: Para la estructura.
-- **CSS3**: Para el diseño visual y layout responsive.
-- **Font Awesome**: Para los íconos.
 
----
 
