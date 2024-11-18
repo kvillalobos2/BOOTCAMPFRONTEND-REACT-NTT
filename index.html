@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My Market - Tu tienda online de confianza" />
+    <title>My Market - Tienda Online</title>
+    
+    <link rel="stylesheet" href="/src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    
+
+    <link rel="preload" href="/src/main.ts" as="script" type="module" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header" id="main-header">
+        <a href="#" class="brand" aria-label="My Market Home">
+          <i class="fa-solid fa-shop" aria-hidden="true"></i>
+          <span class="brand-text">My Market</span>
+        </a>
+        <a href="#" class="cart" id="cart-button" aria-label="Ver carrito de compras">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+          <span class="cart-count" aria-live="polite">0</span>
+        </a>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Search and Filter Section -->
+        <div class="search-container">
+          <select 
+            class="category-select" 
+            id="category-select"
+            aria-label="Filtrar por categoría">
+            <option value="">Todas las categorías</option>
+          </select>
+          
+          <input
+            type="text"
+            class="search-input"
+            id="search-input"
+            placeholder="Buscar productos..."
+            aria-label="Buscar productos"
+          />
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading-spinner" class="loading-spinner" hidden>
+          <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
+          <span>Cargando productos...</span>
+        </div>
+        <div id="error-message" class="error-message" hidden>
+          <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+          <span>Ha ocurrido un error al cargar los productos. Por favor, intente nuevamente.</span>
+          <button id="retry-button" class="retry-button">
+            Reintentar
+          </button>
+        </div>
+        <!-- Products Grid -->
+        <div class="product-grid" id="product-grid" role="list" aria-label="Lista de productos">
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-logo">
+          <h2>My Market</h2>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            © 2024 My Market. Todos los derechos reservados |
+            <a href="#" class="footer-link">Términos y condiciones</a> |
+            <a href="#" class="footer-link">Privacidad</a>
+          </div>
+          <div class="footer-social">
+            <a 
+              href="https://facebook.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="social-icon"
+              aria-label="Visitar Facebook">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a 
+              href="https://twitter.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="social-icon"
+              aria-label="Visitar Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a 
+              href="https://instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="social-icon"
+              aria-label="Visitar Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Cart Modal-->
+    <template id="cart-modal-template">
+      <div class="cart-modal" id="cart-modal" aria-modal="true" role="dialog">
+        <div class="cart-modal-content">
+          <div class="cart-modal-header">
+            <h2>Carrito de Compras</h2>
+            <button class="cart-close" aria-label="Cerrar carrito">×</button>
+          </div>
+          <div class="cart-items" role="list">
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- Product Card-->
+    <template id="product-card-template">
+      <div class="product-card" role="listitem">
+        <span class="discount-badge" hidden></span>
+        <img class="product-image" alt="" />
+        <h3 class="product-name"></h3>
+        <h4 class="categories">Categoría:</h4>
+        <p class="badge"></p>
+        <p class="product-stock"></p>
+        <p class="price"></p>
+        <button class="add-to-cart" type="button"></button>
+      </div>
+    </template>
+
+    <!-- Cart Item-->
+    <template id="cart-item-template">
+      <div class="cart-item" role="listitem">
+        <img class="cart-item-image" alt="" />
+        <div class="cart-item-details">
+          <h3></h3>
+          <p class="cart-item-price"></p>
+        </div>
+        <button class="cart-item-remove" aria-label="Eliminar del carrito">
+          <i class="fa-solid fa-trash" aria-hidden="true"></i>
+        </button>
+      </div>
+    </template>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
