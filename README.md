@@ -1,33 +1,25 @@
 # My Market 🛒
 
-## Funcionalidad del Carrito de Compras
+## Arquitectura
 
-Se ha añadido la funcionalidad al carrito de compras, que incluye:
+Este proyecto sigue una **arquitectura modular**, diseñada para facilitar la mantenibilidad y escalabilidad del código. Se ha utilizado **Typescript Vanilla** para asegurar un código limpio, ligero y fácil de mantener.
+### Estructura de Carpetas:
 
-- **Agregar productos**: Los usuarios pueden agregar productos al carrito.
-- **Actualizar cantidades**: Se actualiza la cantidad de productos en el carrito. 
-- **Eliminar productos**: Los usuarios pueden eliminar productos del carrito.
-
-## Arquitectura 
-
-Este proyecto está diseñado con una **arquitectura modular**, utilizando **JavaScript Vanilla** para asegurar un código limpio, ligero y fácil de mantener. El enfoque modular divide la aplicación en partes independientes que se encargan de tareas específicas.Sigue el principio de **separación de preocupaciones**, dividiendo la funcionalidad en diferentes módulos y carpetas según su propósito.
 - **`components/`**: Contiene los componentes reutilizables de la interfaz de usuario, como el modal del carrito y los elementos individuales de productos.
-- **`mappers/`**: Incluye las funciones que transforman los datos de la API en un formato adecuado para la vista de la aplicación.
-- **`services/`**: Encargado de las interacciones con la API, manteniendo la lógica de negocio separada de las llamadas a la red.
+- **`models/`**: Almacena los modelos de datos de la aplicación, los cuales definen las interfaces y las estructuras de los objetos utilizados en la aplicación.
+- **`types/`**: Almacena los tipos reutilizables en toda la aplicación
+- **`mappers/`**: Incluye las funciones que transforman los datos de la API en un formato adecuado para la vista de la aplicación. 
+- **`services/`**: Maneja las interacciones con la API y la lógica de negocio relacionada con la obtención y manipulación de los datos. 
+- **`store/`**: Almacena el estado global de la aplicación, en este caso, la información relacionada con el carrito de compras.
 
-  
 ## Tecnologías Utilizadas
 
-- **JavaScript Vanilla**: No se han utilizado frameworks o librerías adicionales.
-  
-## Configuraciones del proyecto
+- **Typescript Vanilla**: Para garantizar la consistencia en los tipos de datos y mejorar la calidad del código mediante la tipificación estática.
 
-Para probarlo localmente una vez descargado el código se deberá seguir los siguientes pasos: 
-- **npm i**: Instalación de node modules.
-- **npm run dev**: Para compilar el proyecto.
-  
+## Configuraciones del Proyecto
 
+Para probarlo localmente una vez descargado el código se deberá seguir los siguientes pasos:
 
-
-
+- **npm i**: Instalación de las dependencias de Node.js.
+- **npm run dev**: Para compilar y ejecutar el proyecto en modo de desarrollo.
 
