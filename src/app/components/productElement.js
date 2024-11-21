@@ -1,5 +1,5 @@
 import { addToCart } from "./cartModal";
-
+// eliminar lo que no se usa
 let allProducts = [];
 
 export function createProductElement(product) {

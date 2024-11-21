@@ -1,4 +1,5 @@
-let cart = [];
+// si no le estas reasignando ning'un valor se usa const
+const cart = [];
 const cartModal = createCartModal();
 
 export function createCartModal() {
@@ -30,7 +31,6 @@ export function createCartModal() {
     document.body.appendChild(cartModal);
     return cartModal;
   }
-
 
   export function addToCart(product) {
     cart.push(product);

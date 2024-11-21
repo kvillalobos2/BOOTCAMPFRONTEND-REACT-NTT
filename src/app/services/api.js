@@ -32,6 +32,8 @@ export async function fetchProducts() {
     }
   }
 
+  // esta logica deber'ia estar aparte no mezclar las llamadas a apis y procesar datos en un mismo archivo.
+
   export function renderCategories(categories) {
     const categorySelect = document.querySelector('.category-select');
   
