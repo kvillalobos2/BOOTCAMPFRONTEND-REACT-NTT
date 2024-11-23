@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# My Market 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Arquitectura del Proyecto
 
-Currently, two official plugins are available:
+Este proyecto sigue una **arquitectura modular**, basada en el patrón **Atomic Design**. Se ha utilizado **React + TypeScript** junto con un enfoque basado en carpetas que divide claramente las responsabilidades de la aplicación.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Estructura de Carpetas:
 
-## Expanding the ESLint configuration
+- **`components/`**: Contiene los **componentes reutilizables** de la interfaz de usuario. Ejemplos incluyen tarjetas de productos, search, header y el footer. 
+- **`domain/`**: Se agrupan conceptos relacionados con las reglas de negocio o lógica específica de la aplicación.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **`pages/`**: Almacena las **páginas principales** de la aplicación.
 
-- Configure the top-level `parserOptions` property like this:
+- **`services/`**: Gestiona las **interacciones con la API**. Este directorio contiene funciones y métodos para realizar solicitudes HTTP.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tecnologías Utilizadas
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **React + TypeScript**: Garantiza un desarrollo eficiente.
+- **Vite**: Proporciona un entorno de desarrollo rápido y moderno.
+- **CSS**: Para los estilos de la aplicación aplicando la metodología de BEM.
+  
+## Configuración del Proyecto
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Para ejecutar el proyecto localmente, sigue estos pasos:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. npm i
+2. npm run dev 
