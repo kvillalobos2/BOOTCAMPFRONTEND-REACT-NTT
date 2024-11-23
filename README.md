@@ -1,33 +1,50 @@
-# My Market 🛒
+# React + TypeScript + Vite
 
-## Funcionalidad del Carrito de Compras
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Se ha añadido la funcionalidad al carrito de compras, que incluye:
+Currently, two official plugins are available:
 
-- **Agregar productos**: Los usuarios pueden agregar productos al carrito.
-- **Actualizar cantidades**: Se actualiza la cantidad de productos en el carrito. 
-- **Eliminar productos**: Los usuarios pueden eliminar productos del carrito.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Arquitectura 
+## Expanding the ESLint configuration
 
-Este proyecto está diseñado con una **arquitectura modular**, utilizando **JavaScript Vanilla** para asegurar un código limpio, ligero y fácil de mantener. El enfoque modular divide la aplicación en partes independientes que se encargan de tareas específicas.Sigue el principio de **separación de preocupaciones**, dividiendo la funcionalidad en diferentes módulos y carpetas según su propósito.
-- **`components/`**: Contiene los componentes reutilizables de la interfaz de usuario, como el modal del carrito y los elementos individuales de productos.
-- **`mappers/`**: Incluye las funciones que transforman los datos de la API en un formato adecuado para la vista de la aplicación.
-- **`services/`**: Encargado de las interacciones con la API, manteniendo la lógica de negocio separada de las llamadas a la red.
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-  
-## Tecnologías Utilizadas
+- Configure the top-level `parserOptions` property like this:
 
-- **JavaScript Vanilla**: No se han utilizado frameworks o librerías adicionales.
-  
-## Configuraciones del proyecto
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-Para probarlo localmente una vez descargado el código se deberá seguir los siguientes pasos: 
-- **npm i**: Instalación de node modules.
-- **npm run dev**: Para compilar el proyecto.
-  
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-
-
-
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```

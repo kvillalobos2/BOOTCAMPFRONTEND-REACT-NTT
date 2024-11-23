@@ -1,0 +1,83 @@
+
+:root { 
+  --color-primary: lightblue;  
+  --color-white: #ffffff;
+  --color-accent: coral;
+  --padding-xl: 2rem;
+  --padding-lg: 1.5rem;
+  --padding-md: 1rem;
+  --margin-xl: 2rem;
+  --font-size-xxl: 2rem;
+  --font-size-lg: 1.5rem;
+  --letter-spacing-lg: 0.1em;
+  --grid-gap-sm: 1rem;
+  --transition-base: 0.3s ease;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--padding-xl) var(--padding-md);
+  text-align: center;
+  margin-top: auto; 
+}
+
+.footer__link {
+  color: var(--color-white);
+}
+
+.footer__logo {
+  text-align: center;
+  margin-bottom: var(--margin-xl);
+}
+
+.footer__logo h2 {
+  font-size: var(--font-size-xxl);
+  letter-spacing: var(--letter-spacing-lg);
+}
+
+.footer__bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--padding-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__social {
+  display: flex;
+  gap: var(--grid-gap-sm);
+}
+
+.social__icon {
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  transition: color var(--transition-base);
+}
+
+.social__icon:hover {
+  color: var(--color-accent);
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+      padding: var(--padding-lg) var(--padding-md);
+  }
+
+  .footer__bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--grid-gap-sm);
+  }
+}
