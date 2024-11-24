@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# My Market 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Arquitectura del Proyecto
 
-Currently, two official plugins are available:
+Este proyecto sigue una **arquitectura modular**, basada en el patrón **Atomic Design**. Se ha utilizado **React + TypeScript** junto con un enfoque basado en carpetas que divide claramente las responsabilidades de la aplicación.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Estructura de Carpetas:
 
-## Expanding the ESLint configuration
+- **`components/`**: Almacena los componentes reutilizables de la interfaz de usuario (UI), que encapsulan funcionalidad y estilos específicos para diferentes partes de la aplicación.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **`context/`**: Gestiona el estado global de la aplicación utilizando React Context API. 
 
-- Configure the top-level `parserOptions` property like this:
+- **`domain/`**: Define la lógica y modelos asociados a las entidades del dominio. Incluye interfaces y estructuras clave para representar conceptos del negocio.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **`hooks/`**: Contiene hooks personalizados que encapsulan lógica reutilizable y simplifican la interacción con componentes y servicios.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **`pages/`**: Agrupa las vistas principales de la aplicación. 
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **`routes/`**: Gestiona la configuración de las rutas de la aplicación, facilitando la navegación entre diferentes vistas.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **`services/`**: Gestiona las interacciones con la API. Este directorio contiene funciones y métodos para realizar solicitudes HTTP.
+
+- **`utils/`**: Incluye funciones auxiliares y herramientas reutilizables, como validaciones y formateadores de datos.
+
+## Tecnologías Utilizadas
+
+- **React + TypeScript**: Garantiza un desarrollo eficiente.
+- **Vite**: Proporciona un entorno de desarrollo rápido y moderno.
+- **CSS**: Para los estilos de la aplicación aplicando la metodología de BEM.
+  
+## Configuración del Proyecto
+
+Para ejecutar el proyecto localmente, sigue estos pasos:
+
+1. npm i
+2. npm run dev 
