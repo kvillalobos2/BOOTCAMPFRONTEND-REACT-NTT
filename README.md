@@ -26,7 +26,7 @@ Este proyecto sigue una **arquitectura modular**, basada en el patrón **Atomic 
 
 - **React + TypeScript**: Garantiza un desarrollo eficiente.
 - **Vite**: Proporciona un entorno de desarrollo rápido y moderno.
-- **CSS**: Para los estilos de la aplicación aplicando la metodología de BEM.
+- **CSS**: Para los estilos de la aplicación aplicando la metodología BEM.
   
 ## Configuración del Proyecto
 
