@@ -1,0 +1,60 @@
+{
+  "districts": [
+    {
+      "id": 1,
+      "name": "Los Olivos"
+    },
+    {
+      "id": 2,
+      "name": "Ate"
+    },
+    {
+      "id": 3,
+      "name": "Barranco"
+    },
+    {
+      "id": 4,
+      "name": "Breña"
+    },
+    {
+      "id": 5,
+      "name": "Chorrillos"
+    },
+    {
+      "id": 6,
+      "name": "La Molina"
+    },
+    {
+      "id": 7,
+      "name": "La Victoria"
+    },
+    {
+      "id": 8,
+      "name": "Lince"
+    },
+    {
+      "id": 9,
+      "name": "Magdalena del Mar"
+    },
+    {
+      "id": 10,
+      "name": "Miraflores"
+    },
+    {
+      "id": 11,
+      "name": "Pueblo Libre"
+    },
+    {
+      "id": 12,
+      "name": "Rímac"
+    },
+    {
+      "id": 13,
+      "name": "San Borja"
+    },
+    {
+      "id": 14,
+      "name": "San Isidro"
+    }
+  ]
+}
