@@ -16,6 +16,7 @@ const HomePage: FC = () => {
   const [products, setProducts] = useState<ProductResponse[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<ProductResponse[]>([]);
   const [categories, setCategories] = useState<CategoryResponse[]>([]);
+  // no usemos palabras m'agicas, el all podr'ia estar en enum
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -32,6 +33,7 @@ const HomePage: FC = () => {
 
   // Cargar categorías
   const loadCategories = async () => {
+    // se crea una instancia cada vez que se llama a esta funci'on, lo ideal es usar funciones, pero si necesitas usar clases usa m'etodos estaticos
     const service = new CategoryService();
     try {
       const fetchedCategories = await service.getCategories();
@@ -45,6 +47,7 @@ const HomePage: FC = () => {
   const filterProducts = () => {
     let filtered = [...products];
 
+    // no palabras m'agicas
     if (selectedCategory !== "all") {
       filtered = filtered.filter(
         (product) => product.category === selectedCategory

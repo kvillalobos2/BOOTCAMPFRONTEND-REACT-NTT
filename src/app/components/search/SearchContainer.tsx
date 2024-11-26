@@ -19,6 +19,7 @@ const SearchContainer: FC<SearchContainerProps> = ({
   onSearchQueryChange,
   placeholder = "Buscar...",
 }) => {
+  // los estilos deber'ian estar al mismo nivel del componente de lo contrario ser'a dificil reutiliarlo en otro ambito
   return (
     <div className="search__container">
       <select

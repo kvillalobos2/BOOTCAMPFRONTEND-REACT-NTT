@@ -35,6 +35,7 @@ export const appReducer = (state: AppState, action: DispatchObject): AppState =>
       };
 
     case AppActions.IncrementProduct:
+      // usemos llaves para mejorar la legiblidad
       return {
         ...state,
         cart: state.cart.map((item) =>
@@ -45,6 +46,7 @@ export const appReducer = (state: AppState, action: DispatchObject): AppState =>
       };
 
     case AppActions.DecrementProduct:
+      // usemos llaves para mejorar la legiblidad
       return {
         ...state,
         cart: state.cart

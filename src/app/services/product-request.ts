@@ -1,5 +1,6 @@
 import { ProductResponse } from "../domain/product-response";
 
+// se repite en ambos archivos de request se podr'ia tener en un archivo global o variable de entorno
 const productApiUrl = 'https://dummyjson.com';
 
 export const getProducts = async (): Promise<ProductResponse[]> => {
