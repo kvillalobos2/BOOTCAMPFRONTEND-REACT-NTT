@@ -1,3 +1,5 @@
+// si bien valida que el formulario deba tener valores si pongo muchos espacios al inicio y luego valores los envia con todo y espacio al API
+
 import { FC, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useModal } from '../../hooks/useModal';
