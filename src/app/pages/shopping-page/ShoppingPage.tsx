@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useModal } from '../../hooks/useModal';
 import { useGlobalAppDispatch, useGlobalAppState } from "../../context/app-context";
 import { AppActions } from "../../domain/actions-type";
-import { formValidation } from '../../utils/validation';
+import { formValidation } from '../../../utils/validation';
 import ShoppingCart from "../../components/shopping-cart/ShoppingCart";
 import Header from "../../components/header/Header";
 import Form from "../../components/form/Form";
@@ -53,35 +53,57 @@ const ShoppingPage: FC = () => {
   const calculateTotal = (): number => 
     cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
 
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setErrors(prev => ({ ...prev, [name]: formValidation({ ...formData, [name]: value })[name] }));
-  };
+    const trimmedValue = value.trimStart();
+    
+    const fieldName = name as keyof FormData;
+    
+    const updatedFormData = { ...formData, [fieldName]: trimmedValue };
+    setFormData(updatedFormData);
+
+    const validationErrors = formValidation(updatedFormData);
+    setErrors(prev => ({ ...prev, [fieldName]: validationErrors[fieldName] }));
+};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const validationErrors = formValidation(formData);
+  
+ 
+    const normalizedFormData: FormData = {
+      name: formData.name.trim(),
+      lastname: formData.lastname.trim(),
+      district: formData.district.trim(),
+      address: formData.address.trim(),
+      reference: formData.reference.trim(),
+      phone: formData.phone.trim(),
+    };
+  
+  
+    const validationErrors = formValidation(normalizedFormData) as FormData;
     setErrors(validationErrors);
-
+  
+  
     const isValid = Object.values(validationErrors).every(err => err === '');
     
     if (isValid) {
       console.log({
-        nombre: formData.name,
-        apellido: formData.lastname,
-        telefono: formData.phone,
-        distrito: formData.district,
-        direccion: formData.address,
-        referencia: formData.reference,
+        nombre: normalizedFormData.name,
+        apellido: normalizedFormData.lastname,
+        telefono: normalizedFormData.phone,
+        distrito: normalizedFormData.district,
+        direccion: normalizedFormData.address,
+        referencia: normalizedFormData.reference,
         total: calculateTotal(),
-        productos: cart
+        productos: cart,
       });
-
+  
       openModal();
       setFormData(initialFormData);
     }
   };
+  
 
   return (
     <div className="shopping-page">

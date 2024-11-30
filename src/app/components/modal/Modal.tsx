@@ -18,7 +18,7 @@ const Modal: FC<ModalI> = ({ closeModal, isVisible }) => {
   return (
     <div className={`modal ${isVisible ? "show" : ""}`}>
       <div className="modal__content">
-        <p className="modal__text">Su pedido se registró con éxito</p>
+        <p className="modal__text">Su pedido se registró con éxito.</p>
         <button className="modal__button" onClick={handleClose}>
           Cerrar
         </button>

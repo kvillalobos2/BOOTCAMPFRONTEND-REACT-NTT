@@ -17,14 +17,16 @@ export interface DispatchObject {
   payload?: any;
 }
 
-export const appReducer = (state: AppState, action: DispatchObject): AppState => {
+export const appReducer = (
+  state: AppState,
+  action: DispatchObject
+): AppState => {
   switch (action.type) {
     case AppActions.AddToCart:
       const existingProductIndex = state.cart.findIndex(
         (item) => item.product.id === action.payload.id
       );
       if (existingProductIndex >= 0) {
-  
         const updatedCart = [...state.cart];
         updatedCart[existingProductIndex].quantity += 1;
         return { ...state, cart: updatedCart };
@@ -37,23 +39,25 @@ export const appReducer = (state: AppState, action: DispatchObject): AppState =>
     case AppActions.IncrementProduct:
       return {
         ...state,
-        cart: state.cart.map((item) =>
-          item.product.id === action.payload
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        ),
+        cart: state.cart.map((item) => {
+          if (item.product.id === action.payload) {
+            return { ...item, quantity: item.quantity + 1 };
+          }
+          return item;
+        }),
       };
 
     case AppActions.DecrementProduct:
       return {
         ...state,
         cart: state.cart
-          .map((item) =>
-            item.product.id === action.payload
-              ? { ...item, quantity: item.quantity - 1 }
-              : item
-          )
-          .filter((item) => item.quantity > 0), 
+          .map((item) => {
+            if (item.product.id === action.payload) {
+              return { ...item, quantity: item.quantity - 1 };
+            }
+            return item;
+          })
+          .filter((item) => item.quantity > 0),
       };
 
     case AppActions.DeleteProduct:
@@ -61,11 +65,11 @@ export const appReducer = (state: AppState, action: DispatchObject): AppState =>
         ...state,
         cart: state.cart.filter((item) => item.product.id !== action.payload),
       };
-      case AppActions.ClearCart:
+    case AppActions.ClearCart:
       return {
         ...state,
-        cart: [], 
-  };
+        cart: [],
+      };
 
     default:
       return state;

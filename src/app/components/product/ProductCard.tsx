@@ -3,7 +3,7 @@ import { ProductResponse } from "../../domain/product-response";
 import './ProductCard.css';
 import { useGlobalAppDispatch } from "../../context/app-context";
 import { AppActions } from "../../domain/actions-type";
-import { formatDiscount } from "../../utils/formatNumber";
+import { formatDiscount } from "../../../utils/formatNumber";
 
 interface ProductCardI {
   product: ProductResponse;

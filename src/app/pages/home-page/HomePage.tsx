@@ -4,10 +4,12 @@ import Header from "../../components/header/Header";
 import ProductCard from "../../components/product/ProductCard";
 import { ProductResponse } from "../../domain/product-response";
 import { getProducts } from "../../services/product-request";
-import { CategoryService } from "../../services/category-request";
-import SearchContainer from "../../components/search/SearchContainer"; 
+
+import SearchContainer from "../../components/search/SearchContainer";
 import { CategoryResponse } from "../../domain/category-response";
 import Footer from "../../components/footer/Footer";
+import { getCategories } from "@/app/services/category-request";
+import { Category } from "@/app/domain/category-enum";
 
 
 
@@ -16,7 +18,8 @@ const HomePage: FC = () => {
   const [products, setProducts] = useState<ProductResponse[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<ProductResponse[]>([]);
   const [categories, setCategories] = useState<CategoryResponse[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const [selectedCategory, setSelectedCategory] = useState<Category>(Category.All);
   const [searchQuery, setSearchQuery] = useState("");
 
   // Cargar productos
@@ -32,9 +35,8 @@ const HomePage: FC = () => {
 
   // Cargar categorías
   const loadCategories = async () => {
-    const service = new CategoryService();
     try {
-      const fetchedCategories = await service.getCategories();
+      const fetchedCategories = await getCategories();
       setCategories(fetchedCategories);
     } catch (error) {
       console.error("Error al cargar las categorías", error);
@@ -45,7 +47,8 @@ const HomePage: FC = () => {
   const filterProducts = () => {
     let filtered = [...products];
 
-    if (selectedCategory !== "all") {
+
+    if (selectedCategory !== Category.All) {
       filtered = filtered.filter(
         (product) => product.category === selectedCategory
       );
@@ -80,7 +83,7 @@ const HomePage: FC = () => {
         categories={categories}
         selectedCategory={selectedCategory}
         searchQuery={searchQuery}
-        onCategoryChange={setSelectedCategory}
+        onCategoryChange={(category: string) => setSelectedCategory(category as Category)} 
         onSearchQueryChange={setSearchQuery}
       />
 
