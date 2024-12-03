@@ -27,10 +27,17 @@ Este proyecto sigue una **arquitectura modular**, basada en el patrón **Atomic 
 - **React + TypeScript**: Garantiza un desarrollo eficiente.
 - **Vite**: Proporciona un entorno de desarrollo rápido y moderno.
 - **CSS**: Para los estilos de la aplicación aplicando la metodología BEM.
-  
+- **Jest**: Framework utilizado para ejecutar las pruebas unitarias y de integración.
+- **React Testing Library**: Para pruebas de componentes React, simulando interacciones reales de los usuarios con la interfaz.
 ## Configuración del Proyecto
 
 Para ejecutar el proyecto localmente, sigue estos pasos:
 
 1. npm i
-2. npm run dev 
+2. npm run dev
+
+### Cómo Ejecutar los Tests
+1. Para visualizar las pruebas en general: 
+   **npm run coverage** 
+2. Para probar por archivo:
+   **npm run test file: src/app/services/_ _tests_ _/product.request.test.ts**
