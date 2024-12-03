@@ -65,6 +65,15 @@ export const phoneValidation = (phone: string): string => {
   return "";
 };
 
+export const emailValidation = (email: string): string => {
+  if (!email) return "Campo obligatorio";
+  if (!new RegExp(ValidationRegex.Email).test(email)) {
+    return "Por favor ingresa un correo electrónico válido";
+  }
+  return "";
+};
+
+
 export const formValidation = (formData: FormData): Record<keyof FormData, string> => {
   const errors: Record<keyof FormData, string> = {
     name: nameValidation(formData.name),

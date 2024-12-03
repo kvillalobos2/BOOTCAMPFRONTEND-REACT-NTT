@@ -6,10 +6,12 @@ export interface AppState {
     product: ProductResponse;
     quantity: number;
   }[];
+  user: string | null;
 }
 
 export const initialState: AppState = {
   cart: [],
+  user: null,
 };
 
 export interface DispatchObject {
@@ -70,7 +72,17 @@ export const appReducer = (
         ...state,
         cart: [],
       };
+    case AppActions.SetUser:
+      return {
+        ...state,
+        user: action.payload,
+      };
 
+    case AppActions.LogOut:
+      localStorage.clear(); 
+      return {
+        ...initialState,
+      };
     default:
       return state;
   }

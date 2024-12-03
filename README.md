@@ -1,34 +1,36 @@
 # My Market 🛒
 
-## Testing 
+## Arquitectura del Proyecto
 
-Este proyecto incluye una serie de pruebas para garantizar la calidad y la estabilidad del código. Las pruebas cubren diferentes áreas de la aplicación, como componentes, contextos, hooks, páginas, rutas, servicios y utilidades.
+Este proyecto sigue una **arquitectura modular**, basada en el patrón **Atomic Design**. Se ha utilizado **React + TypeScript** junto con un enfoque basado en carpetas que divide claramente las responsabilidades de la aplicación.
 
-### Tipos de Pruebas Implementadas
+### Estructura de Carpetas:
 
-- **Pruebas de Componentes**: Se han probado diversos componentes de la interfaz de usuario (UI) para asegurar que se rendericen correctamente, manejen interacciones y actualicen el estado como se espera.
+- **`components/`**: Almacena los componentes reutilizables de la interfaz de usuario (UI), que encapsulan funcionalidad y estilos específicos para diferentes partes de la aplicación.
+
+- **`context/`**: Gestiona el estado global de la aplicación utilizando React Context API. 
+
+- **`domain/`**: Define la lógica y modelos asociados a las entidades del dominio. Incluye interfaces y estructuras clave para representar conceptos del negocio.
+
+- **`hooks/`**: Contiene hooks personalizados que encapsulan lógica reutilizable y simplifican la interacción con componentes y servicios.
+
+- **`pages/`**: Agrupa las vistas principales de la aplicación. 
+
+- **`routes/`**: Gestiona la configuración de las rutas de la aplicación, facilitando la navegación entre diferentes vistas.
+
+- **`services/`**: Gestiona las interacciones con la API. Este directorio contiene funciones y métodos para realizar solicitudes HTTP.
+
+- **`utils/`**: Incluye funciones auxiliares y herramientas reutilizables, como validaciones y formateadores de datos.
+
+## Tecnologías Utilizadas
+
+- **React + TypeScript**: Garantiza un desarrollo eficiente.
+- **Vite**: Proporciona un entorno de desarrollo rápido y moderno.
+- **CSS**: Para los estilos de la aplicación aplicando la metodología BEM.
   
-- **Pruebas de Contextos**: Los contextos que gestionan el estado global han sido probados para verificar que los datos se distribuyan correctamente a través de la aplicación y que los componentes reaccionen adecuadamente a los cambios de estado.
+## Configuración del Proyecto
 
-- **Pruebas de Hooks**: Los hooks personalizados, han sido probados para garantizar que manejen el estado y realicen las interacciones necesarias correctamente.
+Para ejecutar el proyecto localmente, sigue estos pasos:
 
-- **Pruebas de Páginas y Rutas**: Se han probado las rutas y las páginas de la aplicación para asegurarse de que la navegación funcione correctamente y las vistas se carguen como se espera.
-
-- **Pruebas de Servicios**: Los servicios que interactúan con APIs han sido testeados para confirmar que las solicitudes HTTP se realicen correctamente y los datos se manejen adecuadamente.
-
-- **Pruebas de Utilidades**: Las funciones utilitarias, como validaciones y formateadores, también han sido probadas para asegurar que realicen sus tareas correctamente.
-
-### Herramientas Utilizadas
-
-- **Jest**: Framework utilizado para ejecutar las pruebas unitarias y de integración.
-- **React Testing Library**: Para pruebas de componentes React, simulando interacciones reales de los usuarios con la interfaz.
-
-### Cómo Ejecutar los Tests
-
-1. Instala las dependencias del proyecto:
-   **npm install**
-2. Para visualizar las pruebas en general: 
-   **npm run coverage** 
-3. Para probar por archivo:
-   **npm run test file: src/app/services/_ _tests_ _/product.request.test.ts**
-
+1. npm i
+2. npm run dev 

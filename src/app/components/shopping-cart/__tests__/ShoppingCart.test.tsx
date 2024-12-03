@@ -21,11 +21,11 @@ describe("ShoppingCart component", () => {
             />
         );
 
-        // Verificar productos
+
+        
         expect(screen.getByText("Producto 1")).toBeInTheDocument();
         expect(screen.getByText("Producto 2")).toBeInTheDocument();
 
-        // Verificar precios y cantidades
         expect(screen.getByText("$10.00")).toBeInTheDocument();
         expect(screen.getByText("$20.00")).toBeInTheDocument();
         expect(screen.getByText("2")).toBeInTheDocument();

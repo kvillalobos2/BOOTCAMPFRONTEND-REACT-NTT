@@ -8,6 +8,7 @@ import ShoppingCart from "../../components/shopping-cart/ShoppingCart";
 import Header from "../../components/header/Header";
 import Form from "../../components/form/Form";
 import "./ShoppingPage.css";
+import withAuth from "@/hoc/auth/authHoc";
 
 
 interface FormData {
@@ -136,4 +137,4 @@ const ShoppingPage: FC = () => {
   );
 };
 
-export default ShoppingPage;
+export default withAuth(ShoppingPage);

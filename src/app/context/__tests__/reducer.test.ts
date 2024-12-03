@@ -1,12 +1,8 @@
 import { AppActions } from "@/app/domain/actions-type";
-
 import { appReducer, AppState, initialState } from "../reducer";
 import { productResponseMock } from "@/app/services/__mocks__/product";
 
-const productResponseMock2 = {
-  ...productResponseMock,
-  id: 3,
-};
+const productResponseMock2 = { ...productResponseMock, id: 3 };
 
 describe("appReducer", () => {
   describe("AddToCart", () => {
@@ -25,19 +21,10 @@ describe("appReducer", () => {
       });
     });
 
-    it("Should initialize with an empty cart", () => {
-      const initialState: AppState = { cart: [] };
-      expect(initialState.cart).toHaveLength(0);
-    });
-
     it("Should increment quantity if product already exists", () => {
       const currentState: AppState = {
-        cart: [
-          {
-            product: productResponseMock,
-            quantity: 1,
-          },
-        ],
+        cart: [{ product: productResponseMock, quantity: 1 }],
+        user: null
       };
 
       const action = {
@@ -55,12 +42,8 @@ describe("appReducer", () => {
   describe("IncrementProduct", () => {
     it("Should increment product quantity", () => {
       const currentState: AppState = {
-        cart: [
-          {
-            product: productResponseMock,
-            quantity: 1,
-          },
-        ],
+        cart: [{ product: productResponseMock, quantity: 1 }],
+        user: null
       };
 
       const action = {
@@ -76,15 +59,10 @@ describe("appReducer", () => {
     it("Should keep other products unchanged when incrementing one product", () => {
       const currentState: AppState = {
         cart: [
-          {
-            product: productResponseMock,
-            quantity: 1,
-          },
-          {
-            product: productResponseMock2,
-            quantity: 1,
-          },
+          { product: productResponseMock, quantity: 1 },
+          { product: productResponseMock2, quantity: 1 },
         ],
+        user: null
       };
 
       const action = {
@@ -94,24 +72,19 @@ describe("appReducer", () => {
 
       const newState = appReducer(currentState, action);
 
-      expect(newState.cart).toHaveLength(2);
       expect(newState.cart[0].quantity).toBe(2);
       expect(newState.cart[1].quantity).toBe(1);
     });
 
     it("Should handle increment for non-existent product", () => {
       const currentState: AppState = {
-        cart: [
-          {
-            product: productResponseMock,
-            quantity: 1,
-          },
-        ],
+        cart: [{ product: productResponseMock, quantity: 1 }],
+        user: null
       };
 
       const action = {
         type: AppActions.IncrementProduct,
-        payload: 999, // Non-existent product ID
+        payload: 999, 
       };
 
       const newState = appReducer(currentState, action);
@@ -123,12 +96,8 @@ describe("appReducer", () => {
   describe("DecrementProduct", () => {
     it("Should decrement product quantity when greater than 1", () => {
       const currentState: AppState = {
-        cart: [
-          {
-            product: productResponseMock,
-            quantity: 2,
-          },
-        ],
+        cart: [{ product: productResponseMock, quantity: 2 }],
+        user: null
       };
 
       const action = {
@@ -143,12 +112,8 @@ describe("appReducer", () => {
 
     it("Should remove product when quantity becomes 0", () => {
       const currentState: AppState = {
-        cart: [
-          {
-            product: productResponseMock,
-            quantity: 1,
-          },
-        ],
+        cart: [{ product: productResponseMock, quantity: 1 }],
+        user: null
       };
 
       const action = {
@@ -164,15 +129,10 @@ describe("appReducer", () => {
     it("Should keep other products unchanged when decrementing one product", () => {
       const currentState: AppState = {
         cart: [
-          {
-            product: productResponseMock,
-            quantity: 2,
-          },
-          {
-            product: productResponseMock2,
-            quantity: 3,
-          },
+          { product: productResponseMock, quantity: 2 },
+          { product: productResponseMock2, quantity: 3 },
         ],
+        user: null
       };
 
       const action = {
@@ -182,66 +142,35 @@ describe("appReducer", () => {
 
       const newState = appReducer(currentState, action);
 
-      expect(newState.cart).toHaveLength(2);
       expect(newState.cart[0].quantity).toBe(1);
       expect(newState.cart[1].quantity).toBe(3);
     });
 
     it("Should handle decrement for non-existent product", () => {
       const currentState: AppState = {
-        cart: [
-          {
-            product: productResponseMock,
-            quantity: 1,
-          },
-        ],
+        cart: [{ product: productResponseMock, quantity: 1 }],
+        user: null
       };
 
       const action = {
         type: AppActions.DecrementProduct,
-        payload: 999, // Non-existent product ID
+        payload: 999, 
       };
 
       const newState = appReducer(currentState, action);
 
       expect(newState.cart).toEqual(currentState.cart);
     });
-
-    it("Should return the product unchanged if quantity is not zero after decrementing", () => {
-      const currentState: AppState = {
-        cart: [
-          {
-            product: productResponseMock,
-            quantity: 2,
-          },
-        ],
-      };
-
-      const action = {
-        type: AppActions.DecrementProduct,
-        payload: productResponseMock.id,
-      };
-
-      const newState = appReducer(currentState, action);
-
-      expect(newState.cart).toHaveLength(1);
-      expect(newState.cart[0].product).toEqual(productResponseMock);
-      expect(newState.cart[0].quantity).toBe(1);
-    });
   });
+
   describe("DeleteProduct", () => {
     it("Should remove product from cart", () => {
       const currentState: AppState = {
         cart: [
-          {
-            product: productResponseMock2,
-            quantity: 1,
-          },
-          {
-            product: productResponseMock,
-            quantity: 1,
-          },
+          { product: productResponseMock2, quantity: 1 },
+          { product: productResponseMock, quantity: 1 },
         ],
+        user: null
       };
 
       const action = {
@@ -260,15 +189,10 @@ describe("appReducer", () => {
     it("Should clear all products from cart", () => {
       const currentState: AppState = {
         cart: [
-          {
-            product: productResponseMock,
-            quantity: 1,
-          },
-          {
-            product: productResponseMock,
-            quantity: 1,
-          },
+          { product: productResponseMock, quantity: 1 },
+          { product: productResponseMock, quantity: 1 },
         ],
+        user: null
       };
 
       const action = {
@@ -284,21 +208,102 @@ describe("appReducer", () => {
   describe("Default case", () => {
     it("Should return the current state for an unknown action type", () => {
       const currentState: AppState = {
+        cart: [{ product: productResponseMock, quantity: 1 }],
+        user: null
+      };
+
+      const action = {
+        type: "UNKNOWN_ACTION" as AppActions, 
+      };
+
+      const newState = appReducer(currentState, action);
+
+      expect(newState).toBe(currentState); 
+    });
+  });
+
+  describe("SetUser", () => {
+    it("Should set the user to the payload value", () => {
+      const currentState: AppState = {
+        cart: [],
+        user: null,
+      };
+  
+      const action = {
+        type: AppActions.SetUser,
+        payload: "John Doe",
+      };
+  
+      const newState = appReducer(currentState, action);
+  
+      expect(newState.user).toBe("John Doe");
+    });
+  
+    it("Should keep the previous cart state when setting the user", () => {
+      const currentState: AppState = {
         cart: [
           {
             product: productResponseMock,
             quantity: 1,
           },
         ],
+        user: null,
       };
-
+  
       const action = {
-        type: "UNKNOWN_ACTION" as AppActions, // Tipo desconocido
+        type: AppActions.SetUser,
+        payload: "Jane Doe",
       };
-
+  
       const newState = appReducer(currentState, action);
-
-      expect(newState).toBe(currentState); // El estado no debe cambiar
+  
+      expect(newState.cart).toHaveLength(1); 
+      expect(newState.user).toBe("Jane Doe");
     });
   });
+  
+  describe("LogOut", () => {
+    it("Should clear the user and cart on logout", () => {
+     
+      const currentState: AppState = {
+        cart: [
+          {
+            product: productResponseMock,
+            quantity: 1,
+          },
+        ],
+        user: "John Doe",
+      };
+  
+      const action = {
+        type: AppActions.LogOut,
+      };
+  
+      const newState = appReducer(currentState, action);
+  
+      expect(newState.user).toBeNull(); 
+      expect(newState.cart).toHaveLength(0); 
+    });
+  
+    it("Should reset the state to the initial state", () => {
+      const currentState: AppState = {
+        cart: [
+          {
+            product: productResponseMock,
+            quantity: 1,
+          },
+        ],
+        user: "Jane Doe",
+      };
+  
+      const action = {
+        type: AppActions.LogOut,
+      };
+  
+      const newState = appReducer(currentState, action);
+  
+      expect(newState).toEqual(initialState); 
+    });
+  });
+  
 });

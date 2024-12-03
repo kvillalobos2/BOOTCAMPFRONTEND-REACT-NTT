@@ -5,7 +5,7 @@ import './Footer.css';
 
 const Footer: FC = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" >
       <div className="footer__logo">
         <h2>My Market</h2>
       </div>

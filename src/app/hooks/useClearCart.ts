@@ -1,6 +1,6 @@
 
 import { useGlobalAppDispatch } from '../context/app-context';
-import { AppActions } from '../domain/actions-type'; // Ruta para tu enum de acciones
+import { AppActions } from '../domain/actions-type'; 
 
 const useClearCart = () => {
   const dispatch = useGlobalAppDispatch(); 

@@ -3,7 +3,7 @@ import ShoppingPage from '../ShoppingPage';
 import { AppActions } from '@/app/domain/actions-type';
 import { AppState, DispatchObject } from '@/app/context/reducer';
 import { shoppingCartMock } from '@/app/components/shopping-cart/__mocks__/shoppingCart';
-import { useGlobalAppDispatch, useGlobalAppState } from '@/app/context/app-context';
+import { AppProvider, useGlobalAppDispatch, useGlobalAppState } from '@/app/context/app-context';
 
 
 interface Product {
@@ -47,7 +47,6 @@ interface FormProps {
     onCloseModal: () => void;
 }
 
-
 jest.mock('@/utils/validation', () => ({
     formValidation: () => ({
         name: '',
@@ -85,52 +84,21 @@ jest.mock('@/app/components/form/Form', () => ({
     __esModule: true,
     default: ({ formData, isModalVisible, onSubmit, onChange, onCloseModal }: FormProps) => (
         <form data-testid="mock-form" onSubmit={onSubmit}>
-            <input
-                data-testid="name-input"
-                name="name"
-                value={formData.name}
-                onChange={onChange}
-            />
-            <input
-                data-testid="lastname-input"
-                name="lastname"
-                value={formData.lastname}
-                onChange={onChange}
-            />
-            <input
-                data-testid="district-input"
-                name="district"
-                value={formData.district}
-                onChange={onChange}
-            />
-            <input
-                data-testid="address-input"
-                name="address"
-                value={formData.address}
-                onChange={onChange}
-            />
-            <input
-                data-testid="reference-input"
-                name="reference"
-                value={formData.reference}
-                onChange={onChange}
-            />
-            <input
-                data-testid="phone-input"
-                name="phone"
-                value={formData.phone}
-                onChange={onChange}
-            />
+            <input data-testid="name-input" name="name" value={formData.name} onChange={onChange} />
+            <input data-testid="lastname-input" name="lastname" value={formData.lastname} onChange={onChange} />
+            <input data-testid="district-input" name="district" value={formData.district} onChange={onChange} />
+            <input data-testid="address-input" name="address" value={formData.address} onChange={onChange} />
+            <input data-testid="reference-input" name="reference" value={formData.reference} onChange={onChange} />
+            <input data-testid="phone-input" name="phone" value={formData.phone} onChange={onChange} />
             <button type="submit">Submit</button>
-            {isModalVisible && (
-                <button onClick={onCloseModal}>Close Modal</button>
-            )}
+            {isModalVisible && <button onClick={onCloseModal}>Close Modal</button>}
         </form>
     )
 }));
 
 const mockState: AppState = {
     cart: shoppingCartMock,
+    user: null
 };
 
 const mockDispatch: React.Dispatch<DispatchObject> = jest.fn();
@@ -140,25 +108,31 @@ jest.mock('@/app/context/app-context', () => ({
     useGlobalAppDispatch: jest.fn()
 }));
 
-
 describe('ShoppingPage', () => {
     beforeEach(() => {
         jest.clearAllMocks();
         (useGlobalAppState as jest.Mock).mockReturnValue(mockState);
         (useGlobalAppDispatch as jest.Mock).mockReturnValue(mockDispatch);
-        console.log = jest.fn();
     });
 
-    it('Should renders all main components', () => {
-        render(<ShoppingPage />);
+    it('renders all main components', () => {
+        render(
+            <AppProvider>
+                <ShoppingPage />
+            </AppProvider>
+        );
 
         expect(screen.getByTestId('mock-header')).toBeInTheDocument();
         expect(screen.getByTestId('mock-shopping-cart')).toBeInTheDocument();
         expect(screen.getByTestId('mock-form')).toBeInTheDocument();
     });
 
-    it('Should handle cart actions correctly', () => {
-        render(<ShoppingPage />);
+    it('handles cart actions correctly', () => {
+        render(
+            <AppProvider>
+                <ShoppingPage />
+            </AppProvider>
+        );
 
         fireEvent.click(screen.getByText('Increment'));
         expect(mockDispatch).toHaveBeenCalledWith({
@@ -179,46 +153,37 @@ describe('ShoppingPage', () => {
         });
     });
 
-    it('Should calculate total correctly', () => {
-        render(<ShoppingPage />);
+    it('calculates total correctly', () => {
+        render(
+            <AppProvider>
+                <ShoppingPage />
+            </AppProvider>
+        );
 
-        const total = mockState.cart.reduce((sum, item) =>
-            sum + (item.product.price * item.quantity), 0);
-
+        const total = mockState.cart.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
         expect(screen.getByText(`Total: ${total}`)).toBeInTheDocument();
     });
 
-
-    it('Should handle form submission correctly and opens modal', async () => {
-        render(<ShoppingPage />);
+    it('handles form submission correctly and opens modal', async () => {
+        render(
+            <AppProvider>
+                <ShoppingPage />
+            </AppProvider>
+        );
 
         await act(async () => {
-            fireEvent.change(screen.getByTestId('name-input'), {
-                target: { name: 'name', value: 'John' }
-            });
-            fireEvent.change(screen.getByTestId('lastname-input'), {
-                target: { name: 'lastname', value: 'Doe' }
-            });
-            fireEvent.change(screen.getByTestId('district-input'), {
-                target: { name: 'district', value: 'District 1' }
-            });
-            fireEvent.change(screen.getByTestId('address-input'), {
-                target: { name: 'address', value: '123 Main St' }
-            });
-            fireEvent.change(screen.getByTestId('reference-input'), {
-                target: { name: 'reference', value: 'Near Park' }
-            });
-            fireEvent.change(screen.getByTestId('phone-input'), {
-                target: { name: 'phone', value: '1234567890' }
-            });
+            fireEvent.change(screen.getByTestId('name-input'), { target: { value: 'John' } });
+            fireEvent.change(screen.getByTestId('lastname-input'), { target: { value: 'Doe' } });
+            fireEvent.change(screen.getByTestId('district-input'), { target: { value: 'District 1' } });
+            fireEvent.change(screen.getByTestId('address-input'), { target: { value: '123 Main St' } });
+            fireEvent.change(screen.getByTestId('reference-input'), { target: { value: 'Near Park' } });
+            fireEvent.change(screen.getByTestId('phone-input'), { target: { value: '1234567890' } });
         });
 
-        // Submit form
         await act(async () => {
             fireEvent.submit(screen.getByTestId('mock-form'));
         });
 
-        // Check console.log was called with correct data
         expect(console.log).toHaveBeenCalledWith({
             nombre: 'John',
             apellido: 'Doe',
@@ -230,58 +195,37 @@ describe('ShoppingPage', () => {
             productos: expect.any(Array)
         });
 
-        //modal is visible
         expect(screen.getByText('Close Modal')).toBeInTheDocument();
     });
 
-
     describe('ShoppingPage Modal and Navigation', () => {
-        beforeEach(() => {
-            jest.clearAllMocks();
-            (useGlobalAppState as jest.Mock).mockReturnValue(mockState);
-            (useGlobalAppDispatch as jest.Mock).mockReturnValue(mockDispatch);
-        });
-
         it('closes modal and navigates to home when closing modal', async () => {
-            render(<ShoppingPage />);
-
+            render(
+                <AppProvider>
+                <ShoppingPage />
+            </AppProvider>
+            );
             await act(async () => {
-                fireEvent.change(screen.getByTestId('name-input'), {
-                    target: { name: 'name', value: 'John' }
-                });
-                fireEvent.change(screen.getByTestId('lastname-input'), {
-                    target: { name: 'lastname', value: 'Doe' }
-                });
-                fireEvent.change(screen.getByTestId('district-input'), {
-                    target: { name: 'district', value: 'District 1' }
-                });
-                fireEvent.change(screen.getByTestId('address-input'), {
-                    target: { name: 'address', value: '123 Main St' }
-                });
-                fireEvent.change(screen.getByTestId('reference-input'), {
-                    target: { name: 'reference', value: 'Near Park' }
-                });
-                fireEvent.change(screen.getByTestId('phone-input'), {
-                    target: { name: 'phone', value: '1234567890' }
-                });
+                fireEvent.change(screen.getByTestId('name-input'), { target: { value: 'John' } });
+                fireEvent.change(screen.getByTestId('lastname-input'), { target: { value: 'Doe' } });
+                fireEvent.change(screen.getByTestId('district-input'), { target: { value: 'District 1' } });
+                fireEvent.change(screen.getByTestId('address-input'), { target: { value: '123 Main St' } });
+                fireEvent.change(screen.getByTestId('reference-input'), { target: { value: 'Near Park' } });
+                fireEvent.change(screen.getByTestId('phone-input'), { target: { value: '1234567890' } });
             });
 
-            // Submit form to show modal
             await act(async () => {
                 fireEvent.submit(screen.getByTestId('mock-form'));
             });
 
-            // Verify modal is visible
             const closeModalButton = screen.getByText('Close Modal');
             expect(closeModalButton).toBeInTheDocument();
 
-            // Click close modal button
             await act(async () => {
                 fireEvent.click(closeModalButton);
             });
 
-
+            expect(mockNavigate).toHaveBeenCalledWith('/');
         });
-    })
-
+    });
 });

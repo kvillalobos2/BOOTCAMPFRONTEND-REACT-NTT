@@ -6,6 +6,7 @@ import {
   referenceValidation,
   phoneValidation,
   formValidation,
+  emailValidation,
 } from "@/utils/validation";
 import { FormData } from "@/app/domain/form-type";
 
@@ -207,6 +208,29 @@ describe("Form Validation Utils", () => {
         "La referencia debe tener al menos 5 caracteres"
       );
       expect(errors.phone).toBe("El número debe empezar con 9");
+    });
+  });
+
+  describe("emailValidation", () => {
+    it("Should return error for empty email", () => {
+      expect(emailValidation("")).toBe("Campo obligatorio");
+    });
+  
+    it("Should return error for invalid email format", () => {
+      expect(emailValidation("invalid-email")).toBe(
+        "Por favor ingresa un correo electrónico válido"
+      );
+      expect(emailValidation("another@domain")).toBe(
+        "Por favor ingresa un correo electrónico válido"
+      );
+      expect(emailValidation("user@domain.c")).toBe(
+        "Por favor ingresa un correo electrónico válido"
+      );
+    });
+  
+    it("Should return empty string for valid email", () => {
+      expect(emailValidation("user@example.com")).toBe("");
+      expect(emailValidation("valid.email@domain.co")).toBe("");
     });
   });
 });

@@ -39,7 +39,7 @@ describe('Modal', () => {
   it('Should not add "show" class when isVisible is false', () => {
     const mockCloseModal = jest.fn();
 
-    // Renderiza el componente con isVisible = false
+
     const { container } = render(<Modal closeModal={mockCloseModal} isVisible={false} />);
 
 

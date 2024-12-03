@@ -1,0 +1,131 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0f7fa;
+}
+
+.login__container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px; 
+}
+
+.login__title {
+  text-align: center;
+  font-size: 36px; 
+  color: #00796b;
+  margin-bottom: 30px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__input-group {
+  margin-bottom: 30px;
+}
+
+.login__label {
+  font-size: 18px; 
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.login__input {
+  padding: 15px; 
+  font-size: 20px; 
+  border: 1px solid lightseagreen;
+  border-radius: 8px; 
+  outline: none;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.login__input:focus {
+  border-color: #004d40;
+}
+
+.login__button {
+  background-color: lightseagreen;
+  color: white;
+  padding: 16px; 
+  border: none;
+  border-radius: 8px; 
+  font-size: 20px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login__button:hover {
+  background-color: #004d40;
+}
+
+.login__error {
+  color: red;
+  font-size: 16px; 
+  margin-top: 8px;
+}
+
+.login__error-message {
+  color: red;
+  font-size: 16px; 
+  margin-top: 15px;
+  text-align: center;
+}
+
+.login__forgot-password {
+  display: block;
+  text-align: center;
+  font-size: 20px; 
+  color: #00796b;
+  margin-top: 20px; 
+  text-decoration: none;
+}
+
+.login__forgot-password:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .login__container {
+    padding: 20px; 
+    max-width: 85%; 
+  }
+
+  .login__title {
+    font-size: 24px; 
+  }
+
+  .login__input {
+    font-size: 16px; 
+    padding: 10px; 
+  }
+
+  .login__label {
+    font-size: 14px; 
+  }
+
+  .login__button {
+    font-size: 16px; 
+    padding: 12px; 
+  }
+
+  .login__forgot-password {
+    font-size: 14px; 
+    margin-top: 15px; 
+  }
+
+  .login__error {
+    font-size: 14px; 
+  }
+
+  .login__error-message {
+    font-size: 14px; 
+  }
+}
