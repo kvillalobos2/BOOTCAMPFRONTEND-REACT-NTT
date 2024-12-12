@@ -1,4 +1,5 @@
 
+// test del router?
 import './App.css';
 import { AppProvider } from './context/app-context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
