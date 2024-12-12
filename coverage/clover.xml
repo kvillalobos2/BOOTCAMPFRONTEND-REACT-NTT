@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1733197443983" clover="3.2.0">
-  <project timestamp="1733197443983" name="All files">
+<coverage generated="1734019157839" clover="3.2.0">
+  <project timestamp="1734019157839" name="All files">
     <metrics statements="516" coveredstatements="427" conditionals="127" coveredconditionals="111" methods="103" coveredmethods="79" elements="746" coveredelements="617" complexity="0" loc="516" ncloc="516" packages="21" files="32" classes="32"/>
     <package name="app.components.footer">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Footer.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\components\footer\Footer.tsx">
+      <file name="Footer.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/components/footer/Footer.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -15,7 +15,7 @@
     </package>
     <package name="app.components.forgot-password">
       <metrics statements="20" coveredstatements="18" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <file name="ForgotPassword.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\components\forgot-password\ForgotPassword.tsx">
+      <file name="ForgotPassword.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/components/forgot-password/ForgotPassword.tsx">
         <metrics statements="20" coveredstatements="18" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -41,7 +41,7 @@
     </package>
     <package name="app.components.form">
       <metrics statements="10" coveredstatements="10" conditionals="16" coveredconditionals="16" methods="2" coveredmethods="2"/>
-      <file name="Form.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\components\form\Form.tsx">
+      <file name="Form.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/components/form/Form.tsx">
         <metrics statements="10" coveredstatements="10" conditionals="16" coveredconditionals="16" methods="2" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -57,7 +57,7 @@
     </package>
     <package name="app.components.header">
       <metrics statements="19" coveredstatements="19" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <file name="Header.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\components\header\Header.tsx">
+      <file name="Header.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/components/header/Header.tsx">
         <metrics statements="19" coveredstatements="19" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -82,7 +82,7 @@
     </package>
     <package name="app.components.modal">
       <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="Modal.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\components\modal\Modal.tsx">
+      <file name="Modal.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/components/modal/Modal.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -97,7 +97,7 @@
     </package>
     <package name="app.components.pagination">
       <metrics statements="13" coveredstatements="13" conditionals="10" coveredconditionals="10" methods="5" coveredmethods="5"/>
-      <file name="CircularPagination.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\components\pagination\CircularPagination.tsx">
+      <file name="CircularPagination.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/components/pagination/CircularPagination.tsx">
         <metrics statements="13" coveredstatements="13" conditionals="10" coveredconditionals="10" methods="5" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -116,7 +116,7 @@
     </package>
     <package name="app.components.product">
       <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="ProductCard.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\components\product\ProductCard.tsx">
+      <file name="ProductCard.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/components/product/ProductCard.tsx">
         <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -133,7 +133,7 @@
     </package>
     <package name="app.components.search">
       <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <file name="SearchContainer.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\components\search\SearchContainer.tsx">
+      <file name="SearchContainer.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/components/search/SearchContainer.tsx">
         <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="2" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
@@ -146,7 +146,7 @@
     </package>
     <package name="app.components.shopping-cart">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
-      <file name="ShoppingCart.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\components\shopping-cart\ShoppingCart.tsx">
+      <file name="ShoppingCart.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/components/shopping-cart/ShoppingCart.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -161,34 +161,34 @@
     </package>
     <package name="app.config">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="api-config.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\config\api-config.ts">
+      <file name="api-config.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/config/api-config.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
       </file>
     </package>
     <package name="app.context">
       <metrics statements="55" coveredstatements="55" conditionals="14" coveredconditionals="14" methods="11" coveredmethods="11"/>
-      <file name="app-context.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\context\app-context.tsx">
+      <file name="app-context.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/context/app-context.tsx">
         <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="8" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
         <line num="22" count="6" type="stmt"/>
         <line num="23" count="6" type="cond" truecount="1" falsecount="0"/>
         <line num="24" count="4" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
         <line num="30" count="13" type="stmt"/>
         <line num="31" count="13" type="cond" truecount="1" falsecount="0"/>
         <line num="32" count="4" type="stmt"/>
         <line num="34" count="9" type="stmt"/>
       </file>
-      <file name="app-initializer.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\context\app-initializer.tsx">
+      <file name="app-initializer.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/context/app-initializer.tsx">
         <metrics statements="11" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -202,11 +202,11 @@
         <line num="15" count="2" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
-      <file name="reducer.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\context\reducer.ts">
+      <file name="reducer.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/context/reducer.ts">
         <metrics statements="27" coveredstatements="27" conditionals="11" coveredconditionals="11" methods="6" coveredmethods="6"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
         <line num="26" count="16" type="cond" truecount="8" falsecount="0"/>
         <line num="28" count="2" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
@@ -235,7 +235,7 @@
     </package>
     <package name="app.domain">
       <metrics statements="42" coveredstatements="42" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
-      <file name="actions-type.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\domain\actions-type.ts">
+      <file name="actions-type.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/domain/actions-type.ts">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="6" count="13" type="cond" truecount="2" falsecount="0"/>
         <line num="7" count="13" type="stmt"/>
@@ -247,7 +247,7 @@
         <line num="13" count="13" type="stmt"/>
         <line num="14" count="13" type="stmt"/>
       </file>
-      <file name="category-enum.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\domain\category-enum.ts">
+      <file name="category-enum.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/domain/category-enum.ts">
         <metrics statements="27" coveredstatements="27" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="2" count="1" type="stmt"/>
@@ -277,7 +277,7 @@
         <line num="26" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
       </file>
-      <file name="validation-rules.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\domain\validation-rules.ts">
+      <file name="validation-rules.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/domain/validation-rules.ts">
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="2" count="3" type="stmt"/>
@@ -289,7 +289,7 @@
     </package>
     <package name="app.hooks">
       <metrics statements="75" coveredstatements="75" conditionals="9" coveredconditionals="9" methods="16" coveredmethods="16"/>
-      <file name="useAuth.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\hooks\useAuth.ts">
+      <file name="useAuth.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/hooks/useAuth.ts">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -304,7 +304,7 @@
         <line num="15" count="1" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
       </file>
-      <file name="useClearCart.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\hooks\useClearCart.ts">
+      <file name="useClearCart.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/hooks/useClearCart.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="2" count="3" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
@@ -315,7 +315,7 @@
         <line num="12" count="2" type="stmt"/>
         <line num="15" count="3" type="stmt"/>
       </file>
-      <file name="useDistrict.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\hooks\useDistrict.ts">
+      <file name="useDistrict.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/hooks/useDistrict.ts">
         <metrics statements="18" coveredstatements="18" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
@@ -336,7 +336,7 @@
         <line num="33" count="7" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
       </file>
-      <file name="useLocalStorage.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\hooks\useLocalStorage.ts">
+      <file name="useLocalStorage.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/hooks/useLocalStorage.ts">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -348,7 +348,7 @@
         <line num="14" count="3" type="stmt"/>
         <line num="17" count="7" type="stmt"/>
       </file>
-      <file name="useModal.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\hooks\useModal.ts">
+      <file name="useModal.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/hooks/useModal.ts">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -361,7 +361,7 @@
         <line num="15" count="1" type="stmt"/>
         <line num="18" count="9" type="stmt"/>
       </file>
-      <file name="usePagination.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\hooks\usePagination.ts">
+      <file name="usePagination.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/hooks/usePagination.ts">
         <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
@@ -385,7 +385,7 @@
     </package>
     <package name="app.pages.home-page">
       <metrics statements="56" coveredstatements="12" conditionals="8" coveredconditionals="0" methods="11" coveredmethods="0"/>
-      <file name="HomePage.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\pages\home-page\HomePage.tsx">
+      <file name="HomePage.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/pages/home-page/HomePage.tsx">
         <metrics statements="56" coveredstatements="12" conditionals="8" coveredconditionals="0" methods="11" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -447,7 +447,7 @@
     </package>
     <package name="app.pages.login-page">
       <metrics statements="44" coveredstatements="35" conditionals="9" coveredconditionals="6" methods="7" coveredmethods="6"/>
-      <file name="LoginPage.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\pages\login-page\LoginPage.tsx">
+      <file name="LoginPage.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/pages/login-page/LoginPage.tsx">
         <metrics statements="44" coveredstatements="35" conditionals="9" coveredconditionals="6" methods="7" coveredmethods="6"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -497,7 +497,7 @@
     </package>
     <package name="app.pages.shopping-page">
       <metrics statements="49" coveredstatements="15" conditionals="1" coveredconditionals="0" methods="12" coveredmethods="0"/>
-      <file name="ShoppingPage.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\pages\shopping-page\ShoppingPage.tsx">
+      <file name="ShoppingPage.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/pages/shopping-page/ShoppingPage.tsx">
         <metrics statements="49" coveredstatements="15" conditionals="1" coveredconditionals="0" methods="12" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -552,7 +552,7 @@
     </package>
     <package name="app.routes">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="routes.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\routes\routes.ts">
+      <file name="routes.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/routes/routes.ts">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="2" count="2" type="stmt"/>
@@ -562,7 +562,7 @@
     </package>
     <package name="app.routes.private-route">
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="private-route.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\routes\private-route\private-route.tsx">
+      <file name="private-route.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/routes/private-route/private-route.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
@@ -573,7 +573,7 @@
     </package>
     <package name="app.services">
       <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="category-request.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\services\category-request.ts">
+      <file name="category-request.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/services/category-request.ts">
         <metrics statements="9" coveredstatements="9" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -585,7 +585,7 @@
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
       </file>
-      <file name="product-request.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\app\services\product-request.ts">
+      <file name="product-request.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/app/services/product-request.ts">
         <metrics statements="9" coveredstatements="9" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -600,30 +600,30 @@
     </package>
     <package name="hoc.auth">
       <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
-      <file name="authHoc.tsx" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\hoc\auth\authHoc.tsx">
+      <file name="authHoc.tsx" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/hoc/auth/authHoc.tsx">
         <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
         <line num="2" count="3" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="11" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="16" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="21" type="stmt"/>
+        <line num="8" count="21" type="stmt"/>
+        <line num="10" count="21" type="stmt"/>
+        <line num="11" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="16" count="20" type="cond" truecount="2" falsecount="0"/>
         <line num="19" count="4" type="stmt"/>
         <line num="22" count="3" type="stmt"/>
       </file>
     </package>
     <package name="utils">
       <metrics statements="52" coveredstatements="52" conditionals="26" coveredconditionals="26" methods="9" coveredmethods="9"/>
-      <file name="formatNumber.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\utils\formatNumber.ts">
+      <file name="formatNumber.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/utils/formatNumber.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
       </file>
-      <file name="validation.ts" path="D:\NTT DATA\Cod\proyecto-final\proyecto-final-impl\src\utils\validation.ts">
+      <file name="validation.ts" path="/Users/maxcm/Desktop/React/Katerin Villalobos/src/utils/validation.ts">
         <metrics statements="50" coveredstatements="50" conditionals="26" coveredconditionals="26" methods="8" coveredmethods="8"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
