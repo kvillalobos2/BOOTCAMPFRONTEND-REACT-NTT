@@ -1,5 +1,5 @@
 TN:
-SF:src\app\components\footer\Footer.tsx
+SF:src/app/components/footer/Footer.tsx
 FN:6,(anonymous_0)
 FNF:1
 FNH:1
@@ -15,7 +15,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\app\components\form\Form.tsx
+SF:src/app/components/form/Form.tsx
 FN:29,(anonymous_1)
 FN:82,(anonymous_2)
 FNF:2
@@ -54,7 +54,7 @@ BRF:16
 BRH:16
 end_of_record
 TN:
-SF:src\app\components\header\Header.tsx
+SF:src/app/components/header/Header.tsx
 FN:9,(anonymous_0)
 FN:12,(anonymous_1)
 FNF:2
@@ -78,7 +78,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\app\components\modal\Modal.tsx
+SF:src/app/components/modal/Modal.tsx
 FN:10,(anonymous_1)
 FN:13,(anonymous_2)
 FNF:2
@@ -102,7 +102,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\app\components\product\ProductCard.tsx
+SF:src/app/components/product/ProductCard.tsx
 FN:12,(anonymous_0)
 FN:25,(anonymous_1)
 FNF:2
@@ -128,7 +128,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\app\components\search\SearchContainer.tsx
+SF:src/app/components/search/SearchContainer.tsx
 FN:14,(anonymous_0)
 FN:27,(anonymous_1)
 FN:30,(anonymous_2)
@@ -153,7 +153,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src\app\components\shopping-cart\ShoppingCart.tsx
+SF:src/app/components/shopping-cart/ShoppingCart.tsx
 FN:15,(anonymous_0)
 FN:42,(anonymous_1)
 FN:62,(anonymous_2)
@@ -185,7 +185,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:src\app\config\api-config.ts
+SF:src/app/config/api-config.ts
 FNF:0
 FNH:0
 DA:1,4
@@ -195,7 +195,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\app\context\app-context.tsx
+SF:src/app/context/app-context.tsx
 FN:9,(anonymous_0)
 FN:21,(anonymous_1)
 FN:29,(anonymous_2)
@@ -229,7 +229,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\app\context\reducer.ts
+SF:src/app/context/reducer.ts
 FN:20,(anonymous_0)
 FN:27,(anonymous_1)
 FN:42,(anonymous_2)
@@ -283,7 +283,7 @@ BRF:9
 BRH:9
 end_of_record
 TN:
-SF:src\app\domain\actions-type.ts
+SF:src/app/domain/actions-type.ts
 FN:8,(anonymous_0)
 FNF:1
 FNH:1
@@ -303,7 +303,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\app\domain\category-enum.ts
+SF:src/app/domain/category-enum.ts
 FN:1,(anonymous_0)
 FNF:1
 FNH:1
@@ -343,7 +343,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\app\domain\validation-rules.ts
+SF:src/app/domain/validation-rules.ts
 FN:1,(anonymous_0)
 FNF:1
 FNH:1
@@ -361,7 +361,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\app\hooks\useClearCart.ts
+SF:src/app/hooks/useClearCart.ts
 FN:5,(anonymous_0)
 FN:8,(anonymous_1)
 FNF:2
@@ -382,7 +382,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\app\hooks\useDistrict.ts
+SF:src/app/hooks/useDistrict.ts
 FN:8,(anonymous_0)
 FN:13,(anonymous_1)
 FN:15,(anonymous_2)
@@ -416,7 +416,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src\app\hooks\useModal.ts
+SF:src/app/hooks/useModal.ts
 FN:3,(anonymous_0)
 FN:6,(anonymous_1)
 FN:10,(anonymous_2)
@@ -443,7 +443,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\app\pages\home-page\HomePage.tsx
+SF:src/app/pages/home-page/HomePage.tsx
 FN:16,(anonymous_1)
 FN:26,(anonymous_2)
 FN:37,(anonymous_3)
@@ -520,7 +520,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:src\app\pages\shopping-page\ShoppingPage.tsx
+SF:src/app/pages/shopping-page/ShoppingPage.tsx
 FN:40,(anonymous_1)
 FN:49,(anonymous_2)
 FN:53,(anonymous_3)
@@ -602,7 +602,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src\app\routes\routes.ts
+SF:src/app/routes/routes.ts
 FN:1,(anonymous_0)
 FNF:1
 FNH:1
@@ -618,7 +618,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\app\services\category-request.ts
+SF:src/app/services/category-request.ts
 FN:5,(anonymous_0)
 FNF:1
 FNH:1
@@ -639,7 +639,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src\app\services\product-request.ts
+SF:src/app/services/product-request.ts
 FN:5,(anonymous_0)
 FNF:1
 FNH:1
@@ -660,7 +660,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src\utils\formatNumber.ts
+SF:src/utils/formatNumber.ts
 FN:2,(anonymous_0)
 FNF:1
 FNH:1
@@ -673,7 +673,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\utils\validation.ts
+SF:src/utils/validation.ts
 FN:5,(anonymous_0)
 FN:13,(anonymous_1)
 FN:21,(anonymous_2)

@@ -1,3 +1,4 @@
+// test?
 export const nameValidation = (name: string): string => {
   if (!name) return "Campo obligatorio";
   if (name.trim().length < 2) return "El name debe tener al menos 2 caracteres";
