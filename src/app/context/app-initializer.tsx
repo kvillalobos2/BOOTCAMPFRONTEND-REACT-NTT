@@ -6,6 +6,7 @@ const AppInitializer = () => {
     const dispatch = useGlobalAppDispatch();
   
     useEffect(() => {
+      // lo mejor ser'ia crear un util para esto
       const savedUser = localStorage.getItem('user');
       if (savedUser) {
         dispatch({ type: AppActions.SetUser, payload: savedUser });

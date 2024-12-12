@@ -13,6 +13,7 @@ describe('PrivateRoute', () => {
 
   test('Should render the element when there is a token', () => {
 
+    // el localstorage es mejor que se modifique con un spy ya que el entorno de test no es de un navegador es un entorno node
     localStorage.setItem('accessToken', 'fake-access-token');
 
     render(
